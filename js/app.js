@@ -138,20 +138,19 @@ function distance(lg, lt, dlg, dlt) {
 
 
 function selectDevice(data){
-    var found = false;
     var i = 0;
     const selection = document.getElementById('selectedDocument');
     var optiontxt;
-    while(!found){
+    const element = document.getElementById("files1");
+    while(i < arr2.length){
         if(arr2[i].type == data){
-            optiontxt = ("option" + i);
-            let newOption = new Option(optiontxt, arr2[i].type);
-            newOption.text = (arr2[i].documents);
-            newOption.href = "result.html";
-            newOption.value = arr[i].documents;
-            selection.add(newOption);
-            selection.style.visibility = "visible";
-            found = true;
+            let link = document.createElement("a");
+            let text = document.createTextNode(arr2[i].documents);
+            link.href = arr2[i].documents;
+            link.appendChild(text);
+            element.appendChild(link);
+            element.appendChild(document.createElement("br"));
+            link.classList.add('link-primary');
         }
         i++
     }
@@ -176,7 +175,7 @@ const submit = document.getElementById('submit').addEventListener('click', () =>
                 if(arr2[j].type==arr[i].type){
                     let link = document.createElement("a");
                     let text = document.createTextNode(arr2[j].documents);
-                    link.href="result.html";
+                    link.href = arr2[j].documents;
                     link.appendChild(text);
                     element.appendChild(link);
                     link.classList.add('link-primary');
@@ -247,5 +246,6 @@ $( function() {
 
 
 function documentSelected(data){
+    console.log(data)
     window.open("result.html", "_top");
 }
