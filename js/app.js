@@ -89,6 +89,9 @@ if(document.getElementById('scan')){
             let i = 0; 
             let j = 1;
             let select = document.getElementById("Select");
+            while (select.firstChild) {
+                select.removeChild(select.firstChild);
+            }
             var optiontxt;
             L.circle([lat, long], 500).addTo(map);
             
@@ -142,6 +145,9 @@ function selectDevice(data){
     const selection = document.getElementById('selectedDocument');
     var optiontxt;
     const element = document.getElementById("files1");
+    while (element.firstChild) {
+        element.removeChild(element.firstChild);
+    }
     while(i < arr2.length){
         if(arr2[i].type == data){
             let link = document.createElement("a");
