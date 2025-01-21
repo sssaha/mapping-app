@@ -58,7 +58,7 @@
                                 </div>
                                 <div class="card-body"> 
                                     <select id="Select" class="form-select-lg" onchange="if (this.value) selectDevice(this.value);">
-                                        <option>Select Device</option>    
+                                        <option value="" disabled selected hidden >Select Device</option>    
                                     </select>    
                                 </div>
                                 <b>Files:</b> <div id="files1"></div> <br> 
@@ -79,7 +79,7 @@
                                 <br>
                                 <div id="searchBox" class="input-group mb-3" style="display: flex; align-items: center;">
                                     <div class="input-group" style="display: flex; align-items: center;">
-                                      <select class="form-control" id="search" aria-label="Device ID" style="width: auto;">
+                                      <select class="form-control" id="search" aria-label="Device ID" onchange="if (this.value) selectDetailedDevice(this.value);">
                                         <option value="" disabled selected hidden>Select Device ID</option>
                                         <option value="1">Device ID 1</option>
                                         <option value="2">Device ID 2</option>
@@ -87,19 +87,19 @@
                                         <option value="P200C">P200C</option>
                                         <!-- More options can be added as needed -->
                                       </select>
-                                      <button type="button" class="input-group-text" id="clearBtn" onclick="clearSelection()">
+                                      <!-- <button type="button" class="input-group-text" id="clearBtn" onclick="clearSelection()">
                                         &times;
-                                      </button>
+                                      </button> -->
                                       <button class="btn btn-primary" type="button" id="submit">Search</button>
                                     </div>
                                     
                                   </div>
                                   
-                                  <script>
+                                  <!-- <script>
                                     function clearSelection() {
                                       document.getElementById('search').selectedIndex = 0; // Reset to the placeholder
                                     }
-                                  </script>
+                                  </script> -->
                                 <div class="card-body">
                                     <h1 class="card-title">Device Information</h1>
                                     <div class="card-body">

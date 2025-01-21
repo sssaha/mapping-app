@@ -85,7 +85,7 @@ window.onload = async function Function() {
                 while (select.firstChild) {
                     select.removeChild(select.firstChild);
                 }
-                let placeholderOption = new Option("Select Device", "", true, true);
+                let placeholderOption = new Option("Select Device", "Select Device", true, true);
                 select.add(placeholderOption);
                 var i = 0;
                 while(i < deviceIDs.length){
@@ -112,6 +112,8 @@ if(document.getElementById('scan')){
             var optiontxt;
             L.circle([lat, long], 500).addTo(map);
             
+            let placeholderOption = new Option("Select Device", "Select Device", true, true);
+            select.add(placeholderOption);
             while(i < arr.length){
                 let d_long = Number(arr[i].Longitude);
                 let d_lat = Number(arr[i].Latitude);
@@ -132,7 +134,7 @@ if(document.getElementById('scan')){
                         })
                     }).bindPopup(popup).openPopup().addTo(map);
 
-
+                    
                     let newOption = new Option(optiontxt, arr[i].ID);
                     newOption.text = ("ID: " + arr[i].ID + " Type: " + arr[i].type);
                     newOption.value = arr[i].type;
@@ -160,6 +162,7 @@ function distance(lg, lt, dlg, dlt) {
 function selectDevice(data){
     var i = 0;
     // const selection = document.getElementById('selectedDocument');
+    console.log(data)
     var optiontxt;
     const element = document.getElementById("files1");
     while (element.firstChild) {
@@ -182,10 +185,12 @@ function selectDevice(data){
 
 
 
+
+
 document.getElementById('submit').addEventListener('click', () => {
     console.log("Attempting to search...");
     const userInput = document.getElementById('search').value;
-
+    console.log(userInput);
     let i = 0;
     let j = 0;
     let found = false;
