@@ -14,6 +14,13 @@
         
         <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
         <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+
+        <!-- <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" media="screen" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.9.3/css/bootstrap-select.min.css">
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.9.3/js/bootstrap-select.min.js"></script> -->
+
         
         <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
         
@@ -42,19 +49,19 @@
                                     <b>Field Information</b>
                                 </div>
                                 <div class="card-body">
-                                    <h1 class="card-title">Current Location</h1>
-                                    <p class="card-text">
+                                    <h4 class="card-title">Current Location: <span>Latitude: <span id="latitude"></span>, Longitude: <span id="longitude"></span></span></h4>
+                                    <!-- <p class="card-text">
                                         Latitude: <var id="latitude"></var> <br>
                                         Longitude: <var id="longitude"></var>
-                                    </p>
-                                    <button class="btn btn-primary  fs-3" id="scan">Scan</button>
+                                    </p> -->
+                                    <button class="btn btn-primary fs-5" id="scan" >Scan</button>
                                 </div>
                                 <div class="card-body"> 
                                     <select id="Select" class="form-select-lg" onchange="if (this.value) selectDevice(this.value);">
                                         <option>Select Device</option>    
                                     </select>    
                                 </div>
-                                            <b>Files:</b> <div id="files1"></div> <br> 
+                                <b>Files:</b> <div id="files1"></div> <br> 
                             </div>
                         </div>
                     </div>
@@ -70,10 +77,29 @@
                                     <b>Search By ID</b>
                                 </div>
                                 <br>
-                                <div id="searchBox" class="input-group mb-3">
-                                    <input type="text" class="form-control" placeholder="Search By ID" id="search" aria-label="Device ID">
-                                    <button class="btn btn-primary" type="button" id="submit">Search</button>
-                                </div>
+                                <div id="searchBox" class="input-group mb-3" style="display: flex; align-items: center;">
+                                    <div class="input-group" style="display: flex; align-items: center;">
+                                      <select class="form-control" id="search" aria-label="Device ID" style="width: auto;">
+                                        <option value="" disabled selected hidden>Select Device ID</option>
+                                        <option value="1">Device ID 1</option>
+                                        <option value="2">Device ID 2</option>
+                                        <option value="3">Device ID 3</option>
+                                        <option value="P200C">P200C</option>
+                                        <!-- More options can be added as needed -->
+                                      </select>
+                                      <button type="button" class="input-group-text" id="clearBtn" onclick="clearSelection()">
+                                        &times;
+                                      </button>
+                                      <button class="btn btn-primary" type="button" id="submit">Search</button>
+                                    </div>
+                                    
+                                  </div>
+                                  
+                                  <script>
+                                    function clearSelection() {
+                                      document.getElementById('search').selectedIndex = 0; // Reset to the placeholder
+                                    }
+                                  </script>
                                 <div class="card-body">
                                     <h1 class="card-title">Device Information</h1>
                                     <div class="card-body">
@@ -84,7 +110,7 @@
                                             <b>Type:</b> <var id="type"></var> <br>
                                             <b>Files:</b> <div id="files"></div> <br> 
                                     </div> 
-                                    <button class="btn btn-primary  fs-3" id="show">Show Device</button>
+                                    <!-- <button class="btn btn-primary  fs-3" id="show">Show Device</button> -->
                             </div>
                         </div>
                     </div>

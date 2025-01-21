@@ -88,3 +88,13 @@ a{
     }
 }
 
+#searchBox {
+    display: flex;
+    align-items: center;
+    gap: 10px;  /* Adds space between the elements */
+  }
+
+#Select {
+    width: 80%;
+}
+
