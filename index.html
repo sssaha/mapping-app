@@ -30,7 +30,12 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js" integrity="sha512-dfX5uYVXzyU8+KHqj8bjo7UkOdg18PaOtpa48djpNbZHwExddghZ+ZmzWT06R5v6NSk3ZUfsH6FNEDepLx9hPQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     </head>
     <body> 
-        <img src="img/epriLogo.jpg" alt="epriLogo">
+        <div class=" card-body d-flex justify-content-between align-items-center">
+            <h2 class="card-title m-4 text-center">EPRI Mapping Site</h2>
+            <img src="img/EPRI logo 2021_RGB-large.png" alt="epriLogo" class="responsive-image m-4">
+        </div>
+        
+
         <div id="app" class="container-fluid">
             <div id="mdiv" class="row">
                 <div class="col-sm">
@@ -48,15 +53,17 @@
                                 <div class="card-header">
                                     <b>Field Information</b>
                                 </div>
-                                <div class="card-body">
-                                    <h4 class="card-title">Current Location: <span>Latitude: <span id="latitude"></span>, Longitude: <span id="longitude"></span></span></h4>
-                                    <!-- <p class="card-text">
-                                        Latitude: <var id="latitude"></var> <br>
-                                        Longitude: <var id="longitude"></var>
-                                    </p> -->
-                                    <button class="btn btn-primary fs-5" id="scan" >Scan</button>
+                                <!-- <div class="card-body">
+                                    <h5>Current Location: <span id="latitude"></span>, <span id="longitude"></span></h5>
+                                    <button class="btn btn-primary fs-5" id="scan" >Scan Nearest Devices</button>
+                                </div> -->
+
+                                <div class="card-body d-flex justify-content-center align-items-center">
+                                    <h5 >Current Location: <span id="latitude"></span>, <span id="longitude"></span></h5>
+                                    <button class="btn btn-primary ms-2" id="scan">Scan Nearest Devices</button>
                                 </div>
-                                <div class="card-body"> 
+
+                                <div class="card-body d-flex justify-content-center align-items-center"> 
                                     <select id="Select" class="form-select-lg" onchange="if (this.value) selectDevice(this.value);">
                                         <option value="" disabled selected hidden >Select Device</option>    
                                     </select>    
@@ -72,7 +79,7 @@
             
                         <div>
             
-                            <div  class="card text-center">
+                            <div  class="card">
                                 <div class="card-header">
                                     <b>Search By ID</b>
                                 </div>
@@ -100,18 +107,16 @@
                                       document.getElementById('search').selectedIndex = 0; // Reset to the placeholder
                                     }
                                   </script> -->
-                                <div class="card-body">
-                                    <h1 class="card-title">Device Information</h1>
-                                    <div class="card-body">
-                                        <p class="card-text text-start">
-                                            <b>ID:</b> <var id="idVar"></var> <br>
-                                            <b>Longitude:</b> <var id="long"></var> <br>
-                                            <b>Latitude:</b> <var id="lat"></var> <br>
-                                            <b>Type:</b> <var id="type"></var> <br>
-                                            <b>Files:</b> <div id="files"></div> <br> 
-                                    </div> 
-                                    <!-- <button class="btn btn-primary  fs-3" id="show">Show Device</button> -->
-                            </div>
+                                  <div class="card-body">
+                                    <h4 class="card-title">Device Information</h4>
+                                    <ul class="list-unstyled">
+                                        <li><b>ID:</b> <var id="idVar"></var></li>
+                                        <li><b>Longitude:</b> <var id="long"></var></li>
+                                        <li><b>Latitude:</b> <var id="lat"></var></li>
+                                        <li><b>Type:</b> <var id="type"></var></li>
+                                        <li><b>Files:</b> <div id="files"></div></li>
+                                    </ul>
+                                </div>
                         </div>
                     </div>
                 </div>

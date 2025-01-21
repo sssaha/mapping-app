@@ -85,7 +85,7 @@ window.onload = async function Function() {
                 while (select.firstChild) {
                     select.removeChild(select.firstChild);
                 }
-                let placeholderOption = new Option("Select Device", "Select Device", true, true);
+                let placeholderOption = new Option("Select Device by ID", "Select Device", true, true);
                 select.add(placeholderOption);
                 var i = 0;
                 while(i < deviceIDs.length){

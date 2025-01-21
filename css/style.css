@@ -96,5 +96,13 @@ a{
 
 #Select {
     width: 80%;
+    align-items: center;
+}
+
+.responsive-image {
+    margin: 5;
+    width: 10%;       /* Makes the image width 100% of its parent div */
+    height: auto;      /* Maintains the aspect ratio of the image */
+    
 }
 
