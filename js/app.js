@@ -171,7 +171,7 @@ function selectDevice(data){
     while(i < arr2.length){
         if(arr2[i].type == data){
             let link = document.createElement("a");
-            let text = document.createTextNode(arr2[i].documents);
+            let text = document.createTextNode(arr2[i].name);
             link.href = arr2[i].documents;
             link.target="_blank"
             link.appendChild(text);
@@ -212,7 +212,7 @@ document.getElementById('submit').addEventListener('click', () => {
             while (!foundLink) {
                 if (arr2[j].type === arr[i].type) {
                     let link = document.createElement("a");
-                    let text = document.createTextNode(arr2[j].documents);
+                    let text = document.createTextNode(arr2[j].name);
                     link.href = arr2[j].documents;
                     link.target="_blank"
                     link.appendChild(text);
