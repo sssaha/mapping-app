@@ -1,11 +1,26 @@
 type,documents,name
-A1,capacitor1.pdf,Eaton3P Cap
-R1,VS651.pdf,Viper ST Recloser
+A1,capacitor1.pdf,Capacitor
+R1,VS651.pdf,Disable reclosing
 D1,CIM_8.pdf,CIM Primer
 L1,https://www.epri.com/research/products/000000003002030686,Community Power Smart Inverter Experiment
 L1,https://www.epri.com/research/products/000000003002030140,Distribution Operations Guidebook: 2024 Edition
-EPRIREPORT,Operations guidebook.pdf,Distribution Operations Guidebook
-EPRIREPORT,HLT Lenox demonstration.pdf,Hot Line Tag - Lenox Demonstration
-EPRIREPORT,Operations testing PDF.pdf,Alternative Fusing - Non-Expulsion and Current-Limiting Approaches
+EPRIREPORT,Operations guidebook.pdf,Distribution Operations Guide
+EPRIREPORT,HLT Lenox demonstration.pdf,HLT testing
+EPRIREPORT,Operations testing PDF.pdf,Alternative Fusing
 EPRIREPORT,Masked Load.pdf, Masked Load - Short term overloading of conductors
-EPRIREPORT,VS651.pdf,Viper ST Recloser
+EPRIREPORT,VS651.pdf,Disable reclosing
+EPRISPN1,Wildfire Protection.pdf,Wildfire Protection
+EPRISPN1,https://distribution.epri.com/safety/public/downed-conductors/detection/operator-video/,Detecting down conductors
+EPRISPN1,StrategicLoadShed.pdf,Strategic Load shed
+EPRISPN1,https://distribution.epri.com/epri/oh-hazards/alert/,Compact recloser alert
+EPRISPN1,https://distribution.epri.com/epri/public/oh-hazards/vegetation-faults/,Vegetation Faults
+EPRISPN2,Control Center Of the Future.pdf,Control Center Of the Future
+EPRISPN2,Alarm Management.pdf,Alarm Management
+EPRISPN2,AMI down conductors.pdf,AMI for down conductors
+EPRISPN2,Open DSCADA.pdf,Open DSCADA
+EPRISPN2,FLISR Testing.pdf,FLISR Testing
+EPRISPN2,Voice Assistant.pdf,Voice Assistant
+EPRISPN2,Conductor Burndowns.pdf,Conductor Burndowns
+EPRISPN2,UGDelta.pdf,Delta systems
+EPRISPN2,https://www.epri.com/research/products/000000003002026860,Falling Conductors
+EPRISPN2,https://www.epri.com/research/products/000000003002024738,Live down conductors
